@@ -1,0 +1,44 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store # macOS specific
+
+# Log files
+*.log
+
+# Database files (if using SQLite or similar)
+*.sqlite3
+*.db
+
+# Configuration files with sensitive data (if not managed securely)
+.env
+.env.*
+config.ini # Or other config files
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook specific files (if applicable)
+.ipynb_checkpoints/
+
+# FastAPI specific
+# If you are generating a static OpenAPI schema or client code
+openapi.json
+client/
+
+#screenshots
+Screenshots
