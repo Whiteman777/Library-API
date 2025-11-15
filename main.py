@@ -131,7 +131,7 @@ def displayAllAvailableBooks():
 def displaySpecificAvailableBook(bookId: int):
     if bookId in books and books[bookId]["available_copies"] > 0:
         return{"book": books[bookId],"status": "success"}
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book not available to borrow")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book is not available to borrow")
 
 #POST method to borrow specific book by ID
 @server.post("/borrow/{bookId}",status_code=status.HTTP_200_OK)
@@ -139,7 +139,7 @@ def borrowBook(bookId: int):
     if bookId in books and books[bookId]["available_copies"] >0:
         books[bookId]["available_copies"] -= 1
         return{"message": "Book borrowed successfully","book": books[bookId],"status": "success"}
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book not available to borrow")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book is not available to borrow")
 
 ################ /return APIS ################
 
@@ -149,4 +149,4 @@ def returnBook(bookId: int):
     if bookId in books:
         books[bookId]["available_copies"] += 1
         return{"message": "Book returned successfully","book": books[bookId],"status": "success"}
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book not found in library")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book not found")

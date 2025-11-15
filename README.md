@@ -1,5 +1,5 @@
 # Library API
-Library APIs that manipulate Books data such as:
+Library API that manipulate Books data (CRUD) such as:
 * List
 * Update
 * Delete
@@ -16,6 +16,30 @@ libraryApi
 ├── README.md
 └── Screenshots
 ```
+
+## Installation
+
+### Create virtual enviorment 
+
+```bash
+python -m venv .venv
+
+source .venv/bin/activate
+```
+
+### Install requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the server
+
+```bash
+uvicorn main:server --reload
+```
+
+> To see the API outputs go to http://127.0.0.1:8000
 
 ## API Endpoints
  * [/](#10---)
