@@ -30,7 +30,7 @@ source .venv/bin/activate
 ### Install requirements
 
 ```bash
-pip install -r requirements.txt
+pip install fastapi uvicorn
 ```
 
 ### Run the server
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 uvicorn main:server --reload
 ```
 
-> To see the API outputs go to http://127.0.0.1:8000
+> To see the API output go to http://127.0.0.1:8000
 
 ## API Endpoints
  * [/](#10---)
